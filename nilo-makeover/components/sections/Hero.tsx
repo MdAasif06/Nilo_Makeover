@@ -37,7 +37,7 @@ export function Hero() {
 
           <h1 className="mt-6 text-balance font-serif text-5xl font-medium leading-[1.05] text-cream sm:text-6xl lg:text-7xl">
             Luxury Bridal &amp;{' '}
-            <span className="text-gradient-gold italic">Beauty</span> Experience
+            <span className="text-gold italic">Beauty</span> Experience
           </h1>
 
           <p className="mt-6 max-w-xl text-pretty text-base font-light leading-relaxed text-foreground/80 sm:text-lg">

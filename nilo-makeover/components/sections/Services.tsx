@@ -77,7 +77,7 @@ export function Services() {
           eyebrow="Our Services"
           title={
             <>
-              Beauty Services <span className="italic text-gradient-gold">Crafted</span>{' '}
+              Beauty Services <span className="italic text-gold">Crafted</span>{' '}
               For You
             </>
           }

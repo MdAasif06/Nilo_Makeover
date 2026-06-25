@@ -58,7 +58,7 @@ export function Packages() {
           eyebrow="Bridal Packages"
           title={
             <>
-              Curated <span className="italic text-gradient-gold">Bridal</span> Packages
+              Curated <span className="italic text-gold">Bridal</span> Packages
             </>
           }
           description="Thoughtfully designed packages for every bride. Customisation available on request."

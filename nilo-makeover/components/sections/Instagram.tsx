@@ -22,7 +22,7 @@ export function InstagramFeed() {
           eyebrow="Instagram"
           title={
             <>
-              Follow Our <span className="italic text-gradient-gold">Journey</span>
+              Follow Our <span className="italic text-gold">Journey</span>
             </>
           }
           description="@nilomakeoversalon — daily inspiration from our studio."

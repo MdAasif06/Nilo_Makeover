@@ -43,7 +43,7 @@ export function Faq() {
           title={
             <>
               Frequently Asked{' '}
-              <span className="italic text-gradient-gold">Questions</span>
+              <span className="italic text-gold">Questions</span>
             </>
           }
         />

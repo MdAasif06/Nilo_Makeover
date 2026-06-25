@@ -41,7 +41,7 @@ export function Contact() {
           title={
             <>
               Let&apos;s Create Something{' '}
-              <span className="italic text-gradient-gold">Beautiful</span>
+              <span className="italic text-gold">Beautiful</span>
             </>
           }
           description="Book your appointment or enquire about our services — we'd love to hear from you."

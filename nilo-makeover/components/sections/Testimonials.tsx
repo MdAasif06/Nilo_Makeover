@@ -53,7 +53,7 @@ export function Testimonials() {
           eyebrow="Testimonials"
           title={
             <>
-              Loved By Our <span className="italic text-gradient-gold">Clients</span>
+              Loved By Our <span className="italic text-gold">Clients</span>
             </>
           }
         />

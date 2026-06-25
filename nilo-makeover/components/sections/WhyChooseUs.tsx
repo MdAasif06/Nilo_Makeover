@@ -35,7 +35,7 @@ export function WhyUs() {
           eyebrow="Why Choose Us"
           title={
             <>
-              The Nilo <span className="italic text-gradient-gold">Difference</span>
+              The Nilo <span className="italic text-gold">Difference</span>
             </>
           }
           description="A premium beauty experience built on trust, skill and genuine care."

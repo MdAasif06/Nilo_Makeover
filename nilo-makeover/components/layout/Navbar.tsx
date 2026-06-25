@@ -33,10 +33,10 @@ export function Navbar() {
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
         <a href="#home" className="flex flex-col leading-none">
-          <span className="font-serif text-2xl font-semibold tracking-wide text-gradient-gold">
+          <span className="font-serif text-2xl font-semibold tracking-wide text-gold">
             Nilo
           </span>
-          <span className="text-[0.6rem] uppercase tracking-[0.35em] text-muted-foreground">
+          <span className="text-[0.8rem] uppercase tracking-[0.35em] text-foreground">
             Makeover Salon
           </span>
         </a>

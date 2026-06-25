@@ -22,7 +22,7 @@ export function Gallery() {
           title={
             <>
               A Glimpse Of Our{' '}
-              <span className="italic text-gradient-gold">Artistry</span>
+              <span className="italic text-gold">Artistry</span>
             </>
           }
           description="Real looks created in our studio — bridal, party, hair and beauty."

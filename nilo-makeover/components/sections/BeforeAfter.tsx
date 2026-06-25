@@ -26,7 +26,7 @@ export function BeforeAfter() {
           eyebrow="Before & After"
           title={
             <>
-              The <span className="italic text-gradient-gold">Transformation</span>
+              The <span className="italic text-gold">Transformation</span>
             </>
           }
           description="Drag the slider to reveal the stunning difference our artistry makes."
