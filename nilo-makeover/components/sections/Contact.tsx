@@ -34,7 +34,10 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-24 sm:py-32">
+    <section id="contact" className="relative overflow-hidden py-24 sm:py-32">
+      <div className="absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b from-gold/12 to-transparent" />
+      <div className="absolute -left-16 top-16 -z-10 size-64 rounded-full bg-[#f6b7cd]/14 blur-3xl" />
+      <div className="absolute -right-20 bottom-10 -z-10 size-72 rounded-full bg-gold/10 blur-3xl" />
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Contact"
@@ -58,7 +61,7 @@ export function Contact() {
           >
             <form onSubmit={handleSubmit} className="flex flex-col gap-5">
               <div>
-                <label htmlFor="name" className="mb-2 block text-sm font-light text-foreground/80">
+                <label htmlFor="name" className="mb-2 block text-sm font-medium text-foreground/90">
                   Full Name
                 </label>
                 <input
@@ -67,12 +70,12 @@ export function Contact() {
                   suppressHydrationWarning
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
-                  className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
+                  className="w-full rounded-xl border border-border bg-background/80 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold focus:bg-background"
                   placeholder="Your name"
                 />
               </div>
               <div>
-                <label htmlFor="phone" className="mb-2 block text-sm font-light text-foreground/80">
+                <label htmlFor="phone" className="mb-2 block text-sm font-medium text-foreground/90">
                   Phone Number
                 </label>
                 <input
@@ -82,12 +85,12 @@ export function Contact() {
                   suppressHydrationWarning
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                  className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
+                  className="w-full rounded-xl border border-border bg-background/80 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold focus:bg-background"
                   placeholder="Your phone number"
                 />
               </div>
               <div>
-                <label htmlFor="service" className="mb-2 block text-sm font-light text-foreground/80">
+                <label htmlFor="service" className="mb-2 block text-sm font-medium text-foreground/90">
                   Service Interested In
                 </label>
                 <select
@@ -95,17 +98,17 @@ export function Contact() {
                   suppressHydrationWarning
                   value={form.service}
                   onChange={(e) => setForm({ ...form, service: e.target.value })}
-                  className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-gold"
+                  className="w-full rounded-xl border border-border bg-background/80 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-gold focus:bg-background"
                 >
                   {services.map((s) => (
-                    <option key={s} value={s} className="bg-card">
+                    <option key={s} value={s} className="bg-card text-foreground">
                       {s}
                     </option>
                   ))}
                 </select>
               </div>
               <div>
-                <label htmlFor="message" className="mb-2 block text-sm font-light text-foreground/80">
+                <label htmlFor="message" className="mb-2 block text-sm font-medium text-foreground/90">
                   Message
                 </label>
                 <textarea
@@ -114,14 +117,14 @@ export function Contact() {
                   suppressHydrationWarning
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
-                  className="w-full resize-none rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
+                  className="w-full resize-none rounded-xl border border-border bg-background/80 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold focus:bg-background"
                   placeholder="Tell us about your event or requirement"
                 />
               </div>
               <button
                 type="submit"
                 suppressHydrationWarning
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-all hover:bg-gold-soft"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-gold to-gold-soft px-6 py-4 text-sm font-semibold uppercase tracking-wider text-primary-foreground transition-all hover:scale-[1.01] hover:shadow-[0_16px_35px_-20px_var(--gold)]"
               >
                 <Send className="size-4" />
                 Send via WhatsApp
@@ -143,8 +146,8 @@ export function Contact() {
                   <MapPin className="size-5" />
                 </span>
                 <div>
-                  <h3 className="font-serif text-lg font-medium text-cream">Visit Us</h3>
-                  <p className="mt-1 text-sm font-light leading-relaxed text-muted-foreground">
+                  <h3 className="font-serif text-lg font-semibold text-cream">Visit Us</h3>
+                  <p className="mt-1 text-sm font-normal leading-relaxed text-muted-foreground">
                     {site.address.line1},<br />
                     {site.address.line2},<br />
                     {site.address.line3}, {site.address.city}
@@ -155,7 +158,7 @@ export function Contact() {
               <div className="mt-6 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={telLink()}
-                  className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/40 px-5 py-3 text-sm font-medium text-gold transition-colors hover:bg-gold/10"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-full border border-gold/40 bg-background/70 px-5 py-3 text-sm font-semibold text-gold transition-colors hover:bg-gold/10"
                 >
                   <Phone className="size-4" />
                   Click to Call
@@ -164,7 +167,7 @@ export function Contact() {
                   href={whatsappLink('Hi, I would like to book an appointment.')}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-medium text-white transition-opacity hover:opacity-90"
+                  className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 py-3 text-sm font-semibold text-white transition-all hover:scale-[1.01] hover:opacity-95"
                 >
                   <MessageCircle className="size-4" />
                   WhatsApp
@@ -172,7 +175,7 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="overflow-hidden rounded-3xl border border-gold/20">
+            <div className="overflow-hidden rounded-3xl border border-gold/20 bg-card/80">
               <iframe
                 title="Nilo Makeover Salon location map"
                 src={`https://www.google.com/maps?q=${site.mapsQuery}&output=embed`}
@@ -180,7 +183,7 @@ export function Contact() {
                 height="280"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="block w-full grayscale-[30%]"
+                className="block w-full grayscale-[15%]"
               />
             </div>
           </motion.div>

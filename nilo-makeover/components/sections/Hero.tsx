@@ -17,10 +17,23 @@ export function Hero() {
           alt="Bride with luxury bridal makeup at Nilo Makeover Salon"
           fill
           priority
-          className="object-cover object-center opacity-70 lg:object-[70%_center]"
+          style={{ opacity: 'var(--hero-image-opacity)' }}
+          className="object-cover object-center lg:object-[70%_center]"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-background/30" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40" />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              'linear-gradient(to right, var(--hero-overlay-left), var(--hero-overlay-mid), var(--hero-overlay-right))',
+          }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage:
+              'linear-gradient(to top, var(--hero-overlay-bottom), transparent, var(--hero-overlay-top))',
+          }}
+        />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-7xl px-5 lg:px-8">

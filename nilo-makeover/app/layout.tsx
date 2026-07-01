@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  themeColor: '#0B0B0B',
+  themeColor: '#111111',
   colorScheme: 'dark',
 }
 
@@ -55,10 +55,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html suppressHydrationWarning
-      lang="en"
-      className={`${cormorant.variable} ${jost.variable} ${geistMono.variable} bg-background`}
-    >
+    <html suppressHydrationWarning lang="en" className={`${cormorant.variable} ${jost.variable} ${geistMono.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
       </body>

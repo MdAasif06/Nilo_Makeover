@@ -64,14 +64,16 @@ export function Navbar() {
           </a>
         </div>
 
-        <button
-          onClick={() => setOpen((o) => !o)}
-          suppressHydrationWarning
-          className="text-gold lg:hidden"
-          aria-label={open ? 'Close menu' : 'Open menu'}
-        >
-          {open ? <X className="size-7" /> : <Menu className="size-7" />}
-        </button>
+        <div className="flex items-center gap-3 lg:hidden">
+          <button
+            onClick={() => setOpen((o) => !o)}
+            suppressHydrationWarning
+            className="text-gold"
+            aria-label={open ? 'Close menu' : 'Open menu'}
+          >
+            {open ? <X className="size-7" /> : <Menu className="size-7" />}
+          </button>
+        </div>
       </nav>
 
       <AnimatePresence>
