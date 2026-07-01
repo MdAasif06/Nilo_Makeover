@@ -88,6 +88,7 @@ export function Testimonials() {
           <div className="mt-8 flex items-center justify-center gap-4">
             <button
               onClick={prev}
+              suppressHydrationWarning
               aria-label="Previous review"
               className="flex size-11 items-center justify-center rounded-full border border-gold/40 text-gold transition-colors hover:bg-gold/10"
             >
@@ -98,6 +99,7 @@ export function Testimonials() {
                 <button
                   key={i}
                   onClick={() => setIndex(i)}
+                  suppressHydrationWarning
                   aria-label={`Go to review ${i + 1}`}
                   className={`h-2 rounded-full transition-all ${
                     i === index ? 'w-8 bg-gold' : 'w-2 bg-gold/30'
@@ -107,6 +109,7 @@ export function Testimonials() {
             </div>
             <button
               onClick={next}
+              suppressHydrationWarning
               aria-label="Next review"
               className="flex size-11 items-center justify-center rounded-full border border-gold/40 text-gold transition-colors hover:bg-gold/10"
             >

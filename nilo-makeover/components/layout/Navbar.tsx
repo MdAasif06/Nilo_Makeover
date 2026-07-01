@@ -66,6 +66,7 @@ export function Navbar() {
 
         <button
           onClick={() => setOpen((o) => !o)}
+          suppressHydrationWarning
           className="text-gold lg:hidden"
           aria-label={open ? 'Close menu' : 'Open menu'}
         >

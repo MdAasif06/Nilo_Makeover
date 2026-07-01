@@ -64,6 +64,7 @@ export function Contact() {
                 <input
                   id="name"
                   required
+                  suppressHydrationWarning
                   value={form.name}
                   onChange={(e) => setForm({ ...form, name: e.target.value })}
                   className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
@@ -78,6 +79,7 @@ export function Contact() {
                   id="phone"
                   type="tel"
                   required
+                  suppressHydrationWarning
                   value={form.phone}
                   onChange={(e) => setForm({ ...form, phone: e.target.value })}
                   className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
@@ -90,6 +92,7 @@ export function Contact() {
                 </label>
                 <select
                   id="service"
+                  suppressHydrationWarning
                   value={form.service}
                   onChange={(e) => setForm({ ...form, service: e.target.value })}
                   className="w-full rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors focus:border-gold"
@@ -108,6 +111,7 @@ export function Contact() {
                 <textarea
                   id="message"
                   rows={3}
+                  suppressHydrationWarning
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   className="w-full resize-none rounded-xl border border-border bg-background/40 px-4 py-3 text-sm text-foreground outline-none transition-colors placeholder:text-muted-foreground focus:border-gold"
@@ -116,6 +120,7 @@ export function Contact() {
               </div>
               <button
                 type="submit"
+                suppressHydrationWarning
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-gold px-6 py-4 text-sm font-medium uppercase tracking-wider text-primary-foreground transition-all hover:bg-gold-soft"
               >
                 <Send className="size-4" />

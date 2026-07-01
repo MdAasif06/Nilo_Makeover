@@ -84,7 +84,7 @@ export function Packages() {
                   Most Popular
                 </span>
               )}
-              <h3 className="font-serif text-3xl font-semibold text-gradient-gold">
+              <h3 className="font-serif text-3xl font-semibold text-gold">
                 {p.name}
               </h3>
               <p className="text-sm font-light text-muted-foreground">{p.tagline}</p>

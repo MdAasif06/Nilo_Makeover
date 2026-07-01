@@ -17,7 +17,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <div className="grid gap-10 pb-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <span className="font-serif text-3xl font-semibold text-gradient-gold">
+            <span className="font-serif text-3xl font-semibold text-gold">
               Nilo Makeover Salon
             </span>
             <p className="mt-4 max-w-sm text-sm font-light leading-relaxed text-muted-foreground">

@@ -64,7 +64,7 @@ export function Academy() {
             </span>
             <h2 className="mt-4 text-balance font-serif text-4xl font-medium leading-tight text-cream sm:text-5xl">
               Build Your Career In{' '}
-              <span className="italic text-gradient-gold">Beauty</span>
+              <span className="italic text-gold">Beauty</span>
             </h2>
             <p className="mt-4 text-pretty text-base font-light leading-relaxed text-muted-foreground">
               Learn from industry experts at the Nilo Makeover Academy. Our

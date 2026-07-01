@@ -55,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html
+    <html suppressHydrationWarning
       lang="en"
       className={`${cormorant.variable} ${jost.variable} ${geistMono.variable} bg-background`}
     >
