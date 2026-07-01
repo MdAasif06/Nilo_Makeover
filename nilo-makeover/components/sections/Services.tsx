@@ -15,6 +15,7 @@ import {
 } from 'lucide-react'
 import { SectionHeading } from './sectionHeading'
 import { whatsappLink } from '@/lib/site'
+import { fadeUp, staggerContainer } from '@/lib/motion'
 
 const services = [
   {
@@ -84,17 +85,23 @@ export function Services() {
           description="From bridal transformations to everyday glow, every service is delivered with premium products and expert care."
         />
 
-        <div className="mt-14 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-5">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-40px' }}
+          className="mt-14 grid grid-cols-2 gap-4 sm:gap-5 md:grid-cols-3 lg:grid-cols-5"
+        >
           {services.map((s, i) => (
             <motion.a
               key={s.title}
               href={whatsappLink(`Hi, I'm interested in ${s.title}. Please share details.`)}
               target="_blank"
               rel="noopener noreferrer"
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
-              transition={{ duration: 0.4, delay: (i % 5) * 0.06 }}
+              variants={fadeUp}
+              transition={{ duration: 0.4, delay: (i % 5) * 0.05 }}
+              whileHover={{ y: -6, scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
               className="group glass flex flex-col rounded-2xl p-5 transition-all hover:-translate-y-1 hover:border-gold/50"
             >
               <span className="flex size-12 items-center justify-center rounded-full bg-gold/10 text-gold transition-colors group-hover:bg-gold group-hover:text-primary-foreground">
@@ -108,7 +115,7 @@ export function Services() {
               </p>
             </motion.a>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

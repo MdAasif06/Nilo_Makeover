@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import { Check, Crown } from 'lucide-react'
 import { SectionHeading } from './sectionHeading'
 import { whatsappLink } from '@/lib/site'
+import { fadeUp, staggerContainer } from '@/lib/motion'
 
 const packages = [
   {
@@ -52,7 +53,7 @@ const packages = [
 export function Packages() {
   return (
     <section id="packages" className="relative py-24 sm:py-32">
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-card/30 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-card/30 to-transparent" />
       <div className="mx-auto max-w-7xl px-5 lg:px-8">
         <SectionHeading
           eyebrow="Bridal Packages"
@@ -64,14 +65,19 @@ export function Packages() {
           description="Thoughtfully designed packages for every bride. Customisation available on request."
         />
 
-        <div className="mt-14 grid gap-6 lg:grid-cols-3">
+        <motion.div
+          variants={staggerContainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: '-40px' }}
+          className="mt-14 grid gap-6 lg:grid-cols-3"
+        >
           {packages.map((p, i) => (
             <motion.div
               key={p.name}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: '-40px' }}
+              variants={fadeUp}
               transition={{ duration: 0.5, delay: i * 0.1 }}
+              whileHover={{ y: -8 }}
               className={`relative flex flex-col rounded-3xl p-8 ${
                 p.featured
                   ? 'glass-strong border-gold/60 shadow-[0_0_40px_-10px_var(--gold)] lg:-translate-y-4'
@@ -104,10 +110,12 @@ export function Packages() {
                 ))}
               </ul>
 
-              <a
+              <motion.a
                 href={whatsappLink(`Hi, I'd like to book the ${p.name} bridal package.`)}
                 target="_blank"
                 rel="noopener noreferrer"
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
                 className={`mt-8 inline-flex items-center justify-center rounded-full px-6 py-3.5 text-sm font-medium uppercase tracking-wider transition-all ${
                   p.featured
                     ? 'bg-gold text-primary-foreground hover:bg-gold-soft'
@@ -115,10 +123,10 @@ export function Packages() {
                 }`}
               >
                 Book {p.name}
-              </a>
+              </motion.a>
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   )

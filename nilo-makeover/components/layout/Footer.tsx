@@ -20,7 +20,7 @@ export function Footer() {
             <span className="font-serif text-3xl font-semibold text-gold">
               Nilo Makeover Salon
             </span>
-            <p className="mt-4 max-w-sm text-sm font-light leading-relaxed text-muted-foreground">
+            <p className="mt-4 text-white max-w-sm text-md font-light leading-relaxed text-muted-foreground">
               Patna&apos;s premium destination for luxury bridal makeup, beauty
               treatments, hair styling and professional makeup training.
             </p>
@@ -30,7 +30,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
-                className="flex size-10 items-center justify-center rounded-full border border-gold/30 text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
+                className="flex size-10  items-center justify-center rounded-full border border-gold/30 text-gold transition-colors hover:bg-gold hover:text-primary-foreground"
               >
                 <MessageCircle className="size-5" />
               </a>
@@ -60,7 +60,7 @@ export function Footer() {
                 <li key={l.href}>
                   <a
                     href={l.href}
-                    className="text-sm font-light text-muted-foreground transition-colors hover:text-gold"
+                    className="text-sm font-light text-white text-muted-foreground transition-colors hover:text-gold"
                   >
                     {l.label}
                   </a>
@@ -70,18 +70,18 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-lg font-medium text-cream">Reach Us</h4>
+            <h4 className="font-serif text-white text-lg font-medium ">Reach Us</h4>
             <ul className="mt-4 flex flex-col gap-3 text-sm font-light text-muted-foreground">
               <li className="flex items-start gap-2.5">
-                <MapPin className="mt-0.5 size-4 shrink-0 text-gold" />
-                <span>
+                <MapPin className="mt-0.5  size-4 shrink-0 text-gold" />
+                <span className='text-white'>
                   {site.address.line1}, {site.address.line2},{' '}
                   {site.address.line3}, {site.address.city}
                 </span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="size-4 shrink-0 text-gold" />
-                <a href={telLink()} className="hover:text-gold">
+                <a href={telLink()} className="text-white hover:text-gold">
                   {site.phoneDisplay}
                 </a>
               </li>

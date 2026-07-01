@@ -9,7 +9,7 @@ const images = [
   { src: '/images/gallery-2.png', label: 'Hair Styling', span: '' },
   { src: '/images/gallery-3.png', label: 'Skin & Facial', span: '' },
   { src: '/images/gallery-5.png', label: 'Party Makeup', span: 'row-span-2' },
-  { src: '/images/gallery-4.png', label: 'Nail Care', span: '' },
+  { src: '/images/gallery-4.png', label: 'Nail Care', span: 'row-span-2' },
   { src: '/images/gallery-6.png', label: 'Premium Kit', span: '' },
 ]
 
