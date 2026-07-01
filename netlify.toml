@@ -1,0 +1,4 @@
+[build]
+  base = "nilo-makeover"
+  command = "npm ci && npm run build"
+  publish = ".next"
