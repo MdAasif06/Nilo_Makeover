@@ -114,8 +114,8 @@
   body {
     @apply min-h-screen bg-background text-foreground;
     background-image:
-      radial-gradient(circle at top, var(--page-accent-a) 0, transparent 38%),
-      radial-gradient(circle at bottom right, var(--page-accent-b) 0, transparent 34%),
+      radial-gradient(circle at top, var(--page-accent-a) 0, transparent 100%),
+      radial-gradient(circle at bottom right, var(--page-accent-b) 0, transparent 100%),
       linear-gradient(180deg, var(--background), var(--background));
     background-attachment: fixed;
   }

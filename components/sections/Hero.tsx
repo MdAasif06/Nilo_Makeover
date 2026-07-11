@@ -25,7 +25,7 @@ export function Hero() {
           className="absolute inset-0"
           style={{
             backgroundImage:
-              'linear-gradient(to right, var(--hero-overlay-left), var(--hero-overlay-mid), var(--hero-overlay-right))',
+              'linear-gradient(to right,top var(--hero-overlay-left), var(--hero-overlay-mid), var(--hero-overlay-right))',
           }}
         />
         <div
