@@ -1,17 +1,18 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, Phone } from 'lucide-react'
 import { site, telLink } from '@/lib/site'
 
 const links = [
-  { label: 'Services', href: '#services' },
-  { label: 'Bridal', href: '#packages' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Academy', href: '#academy' },
-  { label: 'Reviews', href: '#testimonials' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Bridal', href: '/#packages' },
+  { label: 'Gallery', href: '/#gallery' },
+  { label: 'Academy', href: '/#academy' },
+  { label: 'Reviews', href: '/#testimonials' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export function Navbar() {
@@ -32,24 +33,24 @@ export function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 lg:px-8">
-        <a href="#home" className="flex flex-col leading-none">
+        <Link href="/#home" className="flex flex-col leading-none">
           <span className="font-serif text-2xl font-semibold tracking-wide text-gold">
             Nilo
           </span>
           <span className="text-[0.8rem] uppercase tracking-[0.35em] text-foreground">
             Makeover Salon
           </span>
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-8 lg:flex">
           {links.map((l) => (
             <li key={l.href}>
-              <a
+              <Link
                 href={l.href}
-                className="text-md text-white-500 font-light tracking-wide text-foreground/80 transition-colors hover:text-gold"
+                className="text-md font-light tracking-wide text-foreground/80 transition-colors hover:text-gold"
               >
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
@@ -87,13 +88,13 @@ export function Navbar() {
             <ul className="flex flex-col gap-1 px-6 py-5">
               {links.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
                     onClick={() => setOpen(false)}
                     className="block border-b border-border/40 py-3 text-base font-light text-foreground/80"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li>
@@ -112,3 +113,4 @@ export function Navbar() {
     </header>
   )
 }
+

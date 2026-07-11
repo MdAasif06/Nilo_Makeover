@@ -1,14 +1,15 @@
 'use client'
 
+import Link from 'next/link'
 import { Phone, MapPin, Camera, MessageCircle } from 'lucide-react'
 import { site, telLink, whatsappLink } from '@/lib/site'
 
 const links = [
-  { label: 'Services', href: '#services' },
-  { label: 'Bridal Packages', href: '#packages' },
-  { label: 'Gallery', href: '#gallery' },
-  { label: 'Academy', href: '#academy' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Services', href: '/#services' },
+  { label: 'Bridal Packages', href: '/#packages' },
+  { label: 'Gallery', href: '/#gallery' },
+  { label: 'Academy', href: '/#academy' },
+  { label: 'Contact', href: '/#contact' },
 ]
 
 export function Footer() {
@@ -58,12 +59,12 @@ export function Footer() {
             <ul className="mt-4 flex flex-col gap-2.5">
               {links.map((l) => (
                 <li key={l.href}>
-                  <a
+                  <Link
                     href={l.href}
-                    className="text-sm font-light text-white text-muted-foreground transition-colors hover:text-gold"
+                    className="text-sm font-light text-muted-foreground transition-colors hover:text-gold"
                   >
                     {l.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -74,7 +75,7 @@ export function Footer() {
             <ul className="mt-4 flex flex-col gap-3 text-sm font-light text-muted-foreground">
               <li className="flex items-start gap-2.5">
                 <MapPin className="mt-0.5  size-4 shrink-0 text-gold" />
-                <span className='text-white'>
+                <span className="text-white">
                   {site.address.line1}, {site.address.line2},{' '}
                   {site.address.line3}, {site.address.city}
                 </span>
@@ -101,3 +102,4 @@ export function Footer() {
     </footer>
   )
 }
+

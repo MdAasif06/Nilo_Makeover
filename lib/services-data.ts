@@ -57,7 +57,7 @@ export const services: ServiceItem[] = [
     desc: 'Spa, smoothening & nourishing repair therapies.',
     longDesc: 'Restore the health, shine, and texture of your hair. We offer deep-conditioning spa therapies, Keratin smoothing, cysteine treatments, and anti-hairfall therapy. Specially designed to repair damage caused by heat styling, pollution, and chemical treatments.',
     price: '₹1,999',
-    image: '/images/academy.png',
+    image: '/images/hair-treatment.png',
   },
   {
     id: 'facial',
@@ -66,7 +66,7 @@ export const services: ServiceItem[] = [
     desc: 'Luxury facials for glowing, radiant skin.',
     longDesc: 'Rejuvenate your skin with our customized range of luxury facials. From skin brightening and anti-aging treatments to deep hydration, we choose the ideal products for your skin type. Includes facial steaming, exfoliation, blackhead extraction, a soothing face mask, and a relaxing face massage.',
     price: '₹999',
-    image: '/images/gallery-3.png',
+    image: '/images/facial.png',
   },
   {
     id: 'd-tan',
@@ -75,7 +75,7 @@ export const services: ServiceItem[] = [
     desc: 'Brightening de-tan treatments for even tone.',
     longDesc: 'Remove stubborn tan lines and sun damage with our advanced D-Tan service. Infused with natural active ingredients and milk proteins, this treatment brightens dull areas, evens out skin tone, and restores your natural radiance in just one session.',
     price: '₹499',
-    image: '/images/gallery-3.png',
+    image: '/images/d-tan.png',
   },
   {
     id: 'eyebrows',
@@ -84,7 +84,7 @@ export const services: ServiceItem[] = [
     desc: 'Precise shaping & threading for defined brows.',
     longDesc: 'Enhance your facial symmetry with our precise eyebrow threading and shaping. Our skilled beauticians use high-quality organic cotton threads to gently remove unwanted hair, outlining the perfect arch to match your unique facial structure.',
     price: '₹99',
-    image: '/images/gallery-3.png',
+    image: '/images/eyebrows.png',
   },
   {
     id: 'waxing',
@@ -93,7 +93,7 @@ export const services: ServiceItem[] = [
     desc: 'Smooth, gentle waxing with premium products.',
     longDesc: 'Achieve silky-smooth, hair-free skin with our hygienic waxing services. We use premium, skin-friendly cold and hot waxes (including Rica chocolate wax) that reduce pain, minimize skin redness, and gently exfoliate the skin surface.',
     price: '₹299',
-    image: '/images/gallery-3.png',
+    image: '/images/waxing.png',
   },
   {
     id: 'manicure',
@@ -111,6 +111,6 @@ export const services: ServiceItem[] = [
     desc: 'Relaxing foot care for soft, refreshed feet.',
     longDesc: 'Soothe tired feet with our deeply relaxing pedicure. Featuring a warm foot soak with essential oils, deep scrub exfoliation, nail grooming, callus removal, and a soothing foot massage to boost circulation. Finished with your choice of nail polish.',
     price: '₹699',
-    image: '/images/gallery-4.png',
+    image: '/images/pedicure.png',
   },
 ]
